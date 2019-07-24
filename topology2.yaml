@@ -1,0 +1,12 @@
+services:
+
+  tagcloud:
+    image: tag
+
+  filter:
+    image: filter
+    command: Trump,trump0 -i twitter_texts -o trump0
+
+  stats:
+    image: stats
+    command: -i twitter_texts,reddit_comments,reddit_submissions

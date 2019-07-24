@@ -1,0 +1,99 @@
+---
+version: '3.5'
+
+x-logging: &default-logging
+  options:
+    max-size: '100m'
+    max-file: '1'
+  driver: json-file
+
+networks:
+  catenae:
+    name: catenae
+
+services:
+
+  aerospike:
+    container_name: cf_aerospike
+    image: aerospike/aerospike-server
+    volumes:
+      - ./aerospike.conf:/opt/aerospike/etc/aerospike.conf
+    command: --config-file /opt/aerospike/etc/aerospike.conf
+    logging: *default-logging
+    networks:
+      - catenae
+
+  kafka:
+    container_name: cf_kafka
+    image: catenae/kafka
+    ulimits:
+      nofile: 90000
+    logging: *default-logging
+    networks:
+    - catenae
+
+  proxy_balancer:
+    container_name: cf_proxy_balancer
+    image: registry.catenae.dev/proxy-balancer
+    logging: *default-logging
+    networks:
+      - catenae
+
+  twitter_crawler:
+    container_name: cf_twitter_crawler
+    image: registry.catenae.dev/twitter-crawler
+    entrypoint: java -Xmx16g -jar crawler.jar
+    volumes:
+      - ./crawler.conf:/opt/polypus/crawler.conf
+    logging: *default-logging
+    depends_on:
+      - aerospike
+      - kafka
+    networks:
+      - catenae
+
+  twitter_adapter:
+    container_name: cf_twitter_adapter
+    image: registry.catenae.dev/twitter-crawler-json-adapter
+    command: json_adapter.py -k kafka:9092 -i raw_tweets -o twitter_texts
+    logging: *default-logging
+    depends_on:
+      - kafka
+    networks:
+      - catenae
+
+  reddit_comment_crawler:
+    container_name: cf_reddit_comment_crawler
+    image: brunneis/reddit-crawler
+    command: comment_crawler -k kafka:9092 -o reddit_comments
+    logging: *default-logging
+    depends_on:
+      - kafka
+    networks:
+      - catenae
+
+  reddit_submission_crawler:
+    container_name: cf_reddit_submission_crawler
+    image: brunneis/reddit-crawler
+    command: submission_crawler -k kafka:9092 -o submission_ids
+    logging: *default-logging
+    depends_on:
+      - kafka
+    networks:
+      - catenae
+
+  reddit_submission_extractor:
+    container_name: cf_reddit_submission_extractor
+    image: brunneis/reddit-crawler
+    command: submission_extractor -k kafka:9092 -i submission_ids -o reddit_submissions
+    logging: *default-logging
+    depends_on:
+      - kafka
+    networks:
+      - catenae
+
+  mongodb:
+    image: mongo:4.0-xenial
+    logging: *default-logging
+    networks:
+      - catenae

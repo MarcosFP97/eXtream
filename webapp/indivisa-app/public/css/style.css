@@ -1,0 +1,481 @@
+/* Custom Stylesheet */
+/* Custom Stylesheet */
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.progress {
+  margin: 0;
+}
+
+.container-margins {
+  margin-top: 50px;
+}
+
+.big-card-icon {
+  font-size: 100px;
+  color: #ff6e40;
+}
+
+.big-card-icon2 {
+  font-size: 100px;
+  color: #92DDE8;
+}
+
+.batch-text {
+  color: #92DDE8 !important;
+}
+
+.blue-text {
+  color: #ff6e40 !important;
+}
+
+.big-card-title {
+  font-size: 50px;
+  color: #ff6e40;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #F5F5F5;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+  color: white;
+}
+
+.filters-container {
+  margin-bottom: -30px;
+}
+
+@media (max-width:1470px) {
+  /* Not necessary on small devices */
+  .nnom {
+    display: none;
+  }
+  #slide-out {
+    display: none;
+  }
+  .switch {
+    margin-right: 0;
+  }
+}
+
+.stats-card-action {
+  text-transform: none !important;
+  color: #fff;
+}
+
+.stats-card-action>h5 {
+  line-height: 100%;
+  margin:0;
+}
+
+.stats-card>.card-stacked>.card-content>h1 {
+  line-height: 100%;
+  margin-top: 0;
+}
+
+.stats-card {
+  height: 450px;
+}
+
+@media (min-width:1470px) {
+  #toast-container {
+    top: auto !important;
+    left: auto !important;
+    right: 5%;
+    bottom: 10%;
+  }
+}
+
+.switch {
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.filters-container {
+  padding-top: 20px;
+  background-color: #fff;
+  height: 90px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.filters {
+  margin-top: 20px;
+  background-color: white;
+  /* border: 1px;
+  border-style: solid;
+  border-color: #ff6e40;
+  border-radius: 5px; */
+}
+
+/* ALERT TAGS COLORS */
+
+.item-tag {
+  font-weight: bold !important;
+  background-color: #FFF !important;
+}
+
+.item-tag.undecided {
+  margin-right: 15px;
+  background-color: #BDBDBD !important;
+}
+
+.item-tag.risk {
+  margin-right: 15px;
+  background-color: #F44336 !important;
+}
+
+.item-tag.riskfree {
+  margin-right: 15px;
+  background-color: #8BC34A !important;
+}
+
+.footer-text {
+  position: relative;
+  margin-bottom: 5px;
+  margin-top: -15px;
+  font-size: 12px;
+}
+
+.footer-text.right {
+  float: right;
+  margin-right: 20px;
+}
+
+.footer-text.left {
+  float: left;
+}
+
+@media (min-width:1470px) {
+  .footer-text.left {
+    margin-left: 320px;
+  }
+}
+
+/* AVATAR */
+
+.avatar-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #ff6e40;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.initials {
+  position: relative;
+  top: 17.5px;
+  font-size: 41px;
+  line-height: 41px;
+  color: #fff;
+  font-family: "Roboto", monospace;
+}
+
+.tabs {
+  background-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+}
+
+.tabs .tab a {
+  color: #ff9e80;
+}
+
+.tabs .tab a:active {
+  color: #ff6e40;
+}
+
+.tabs .indicator {
+  background-color: #ff6e40;
+}
+
+.item-tabs>.indicator {
+  width: 50%;
+}
+
+.main-tabs {
+  background-color: #fff;
+}
+
+.main-tabs>.indicator {}
+
+/* List animation */
+
+.item-enter {
+  opacity: 0.0;
+}
+
+.item-enter.item-enter-active {
+  transition: all 0.5s ease;
+  opacity: 1.0;
+}
+
+.sidenav li>a.active {
+  background-color: #e0e0e0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  margin-top: 20px;
+}
+
+input {
+  color: #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.collapsible-body {
+  overflow-y: auto;
+  background-color: #404040;
+  border-bottom: 0;
+}
+
+.collapsible-header {
+  display: block;
+  background-color: #404040;
+  color: #dbdbdb;
+  border-bottom: 0;
+}
+
+.sidenav-margin {
+  margin-top: 0;
+  background-color: #262626;
+}
+
+@media (min-width:1470px) {
+  .sidenav-margin {
+    margin-left: 300px;
+  }
+}
+
+.logo-container-line {
+  height: 4px;
+  background-color: #5d5d5d;
+}
+
+.logo-container {
+  margin-top: 6px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  width: 150px;
+  margin-top: 3px;
+}
+
+.sidenav.sidenav-fixed {
+  margin-top: 64px;
+  z-index: 1;
+}
+
+[type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+  padding-left: 25px;
+}
+
+.item-tag-radio {
+  margin-right: 15px;
+  width: 100%;
+}
+
+.item-nickname {
+  font-size: 15px;
+}
+
+.item-time {
+  position: absolute;
+  margin-left: 90px;
+  margin-top: 40px;
+  font-size: .85rem;
+  color: #757575;
+}
+
+.item-bottom-button {
+  margin-bottom: 0;
+}
+
+.item-bottom-action {
+  margin-top: 1rem;
+}
+
+.fixed-action-btn {
+  position: relative;
+}
+
+/* Begin collapsible cards */
+
+.item-collapsible {
+  margin-top: 30px;
+  z-index: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collapsible.popout>li {
+  margin: 0;
+}
+
+.item-progress {
+  background-color: #fff;
+  height: 13px;
+  width: 59px;
+  border-radius: 0;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.item-progress-text {
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-family: monospace;
+  margin-left: 5px;
+}
+
+.item-progress .determinate {
+  background-color: #5d5d5d;
+}
+
+.post-header-text {
+  margin-top: 25px;
+}
+
+.post-header-icon {
+  float: left;
+  margin-top: 20px;
+}
+
+.post-tag-proba {
+  background-color: #e0e0e0 !important;
+  color: #343434 !important;
+}
+
+.post-tag-margin {
+  margin-right: 6px;
+}
+
+.post-tag-subreddit {
+  margin-right: 12px;
+  /* Double due to the badge padding of 6px */
+  font-weight: bold !important;
+  background-color: #757575 !important;
+  color: #fff !important;
+}
+
+.post-progress {
+  min-height: 5px;
+  margin: -15px;
+  background-image: linear-gradient(to right, #fff 0%, #e0e0e0 90%);
+}
+
+.more-items-button {
+  margin-bottom: 35px;
+}
+
+/* LOADER */
+.sk-folding-cube {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.tag-cloud {
+  width: 100%;
+  height: 500px;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
