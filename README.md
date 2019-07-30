@@ -19,7 +19,7 @@ For more information, have a look at [indivisa.pdf](indivisa.pdf)
 
 ## Video (Demo)
 
-You can have a look at **video.mp4** in order to have an idea about how to work with Indivisa.
+You can have a look at [video.mp4](demo_video/video.mp4) in order to have an idea about how to work with Indivisa.
 
 ## Web Interface
 
