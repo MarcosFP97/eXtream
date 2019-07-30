@@ -15,7 +15,7 @@ Indivisa combines streaming operations with batch processing, it is written in n
 
 Indivisa was developed in CiTIUS by a team of developers and researchers who have expertise on multiple areas, including High Performing Computing, Big Data, Text Mining, Information Retrieval and  Machine Learning. We envisage two main type of users: programmers who might want to personalise the platform to support new Big Data applications or tools and final users who essentially interact with a dashboard that shows the real-time results and analysis made by Indivisa.
 
-For more information, have a look at **indivisa.pdf**
+For more information, have a look at [indivisa.pdf](indivisa.pdf)
 
 ## Video (Demo)
 
