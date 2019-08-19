@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Donwload automatically newer image of Catenae and for the crawler
-docker pull catenae/link:1.0.0
+docker pull catenae/link:2.0.0
 docker pull brunneis/reddit-crawler
 docker pull registry.catenae.dev/twitter-crawler
 docker pull registry.catenae.dev/twitter-crawler-json-adapter

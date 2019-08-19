@@ -2,23 +2,15 @@ services:
 
   tagcloud:
     image: tag
-    command: -i ai0
+    command: -i trump0
 
   filter:
     image: filter
-    command: AI,ai0 -i twitter_texts -o ai0
-
-  filter2:
-    image: filter
-    command: Trump,trump0 -i reddit_comments -o trump0
+    command: Trump,trump0 -i twitter_texts -o trump0
 
   topic:
     image: topic_analysis
     command: 100,#,6 -i trump0
-
-  batch:
-    image: batch
-    command: 1562329219,1562329459,1562329219,1562329579 -i reddit_comments
 
   stats:
     image: stats
