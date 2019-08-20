@@ -32,9 +32,9 @@ class GenericService(Resource):
     def __init__(self, **kwargs):
         self.client = kwargs['client']
         self.consumer = kwargs['consumer']
-        self.consumer.start()
+        self.consumer.start(embedded=True)
         self.mongo = self.consumer.mongodb
-        
+
     def delete(self): # Method that deletes all active containers
         try:
             c = docker.APIClient(base_url='unix://var/run/docker.sock')
