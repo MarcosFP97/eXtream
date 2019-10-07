@@ -18,10 +18,6 @@ eXtream was developed in CiTIUS by a team of developers and researchers who have
 
 For more information, have a look at [eXtream.pdf](eXtream.pdf)
 
-## Video (Demo)
-
-You can have a look at [video.mp4](demo_video/video.mp4) in order to have an idea about how to work with eXtream.
-
 ## Web Interface
 
 Some user interface images are shown below.
