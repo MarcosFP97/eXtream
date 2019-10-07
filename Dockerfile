@@ -23,7 +23,7 @@ MAINTAINER "Marcos Fernández" <marcosfernandezpichel@gmail.com>
 
 RUN \
 
-    apt-get update && apt-get install libsqlite3-0 && apt-get -y install gcc mono-mcs && apt-get -y install libmagic1 && apt-get -y install gcc mono-mcs &&  apt-get install -y libxft-dev libfreetype6 libfreetype6-dev \
+    apt-get update && apt-get install libsqlite3-0 && apt-get -y install libmagic1 \
     && pip install --upgrade pip \
     && pip install \
         pyyaml \
