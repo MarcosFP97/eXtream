@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #Donwload automatically newer image of Catenae and for the crawler
-docker pull catenae/link:2.0.0
+docker pull catenae/link:1.0.0rc3
+docker pull extream/filter-api
 docker pull brunneis/reddit-crawler
 docker pull registry.catenae.dev/twitter-crawler
 docker pull registry.catenae.dev/twitter-crawler-json-adapter
@@ -41,7 +42,7 @@ docker run --restart unless-stopped -tid \
 --net=catenae \
 -v /var/run/docker.sock:/var/run/docker.sock \
 --privileged \
-filter-api -o void -m mongodb:27017 --kafka-bootstrap-server kafka:9092
+extream/filter-api -o void -m mongodb:27017 --kafka-bootstrap-server kafka:9092
 
 
 #Build the webapp image

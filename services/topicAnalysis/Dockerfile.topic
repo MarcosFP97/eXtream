@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-FROM filter-api
+FROM extream/filter-api
 
 RUN \
     pip install --upgrade pip \
@@ -29,7 +29,7 @@ RUN \
        pyLDAvis \
     && python -c 'import nltk;nltk.download("'punkt'");nltk.download("'stopwords'")' \
     && python3 -m spacy download en
-    
+
 COPY utils.py  /usr/local/lib/python3.7/site-packages/pyLDAvis/
 COPY aux.py topic_analysis.py /opt/catenae/
 ENTRYPOINT ["python","topic_analysis.py"]

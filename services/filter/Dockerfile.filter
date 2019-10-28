@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-FROM filter-api
+FROM extream/filter-api
 
 RUN \
     pip install --upgrade pip \
@@ -28,7 +28,7 @@ RUN \
         spacy \
         wordcloud \
         matplotlib \
-    && python -c 'import nltk;nltk.download("'punkt'");nltk.download("'stopwords'")' 
+    && python -c 'import nltk;nltk.download("'punkt'");nltk.download("'stopwords'")'
 
 COPY aux.py filter.py /opt/catenae/
 ENTRYPOINT ["python","filter.py"]
