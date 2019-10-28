@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-FROM catenae/link:2.0.0
+FROM catenae/link:1.0.0rc3
 MAINTAINER "Marcos Fernández" <marcosfernandezpichel@gmail.com>
 
 ################################################
