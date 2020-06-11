@@ -18,7 +18,7 @@ import React, {Component} from "react";
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
-import logo from "../../logo.png";
+import logo from "../../logo.svg";
 import "../../App.css";
 import APIClient from "../../lib/API.js";
 import 'font-awesome/css/font-awesome.min.css';

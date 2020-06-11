@@ -1,10 +1,10 @@
 ---
-version: '3.5'
+version: "3.5"
 
 x-logging: &default-logging
   options:
-    max-size: '100m'
-    max-file: '1'
+    max-size: "10m"
+    max-file: "1"
   driver: json-file
 
 networks:
@@ -12,10 +12,9 @@ networks:
     name: catenae
 
 services:
-
   aerospike:
-    container_name: cf_aerospike
-    image: aerospike/aerospike-server
+    container_name: polypus-twitter-aerospike
+    image: aerospike/aerospike-server:4.1.0.6
     volumes:
       - ./aerospike.conf:/opt/aerospike/etc/aerospike.conf
     command: --config-file /opt/aerospike/etc/aerospike.conf
@@ -24,27 +23,27 @@ services:
       - catenae
 
   kafka:
-    container_name: cf_kafka
+    container_name: polypus-twitter-kafka
     image: catenae/kafka
     ulimits:
       nofile: 90000
     logging: *default-logging
     networks:
-    - catenae
+      - catenae
 
   proxy_balancer:
-    container_name: cf_proxy_balancer
-    image: registry.catenae.dev/proxy-balancer
+    container_name: polypus-twitter-proxy-balancer
+    image: brunneis/proxy-balancer
     logging: *default-logging
     networks:
       - catenae
 
   twitter_crawler:
-    container_name: cf_twitter_crawler
-    image: registry.catenae.dev/twitter-crawler
-    entrypoint: java -Xmx16g -jar crawler.jar
+    container_name: polypus-twitter-twitter-crawler
+    image: brunneis/twitter-firehose
     volumes:
       - ./crawler.conf:/opt/polypus/crawler.conf
+      - ./dicts:/opt/polypus/dicts
     logging: *default-logging
     depends_on:
       - aerospike
@@ -53,8 +52,8 @@ services:
       - catenae
 
   twitter_adapter:
-    container_name: cf_twitter_adapter
-    image: registry.catenae.dev/twitter-crawler-json-adapter
+    container_name: polypus-twitter-twitter-adapter
+    image: brunneis/twitter-firehose-json-adapter
     command: json_adapter.py -k kafka:9092 -i raw_tweets -o twitter_texts
     logging: *default-logging
     depends_on:

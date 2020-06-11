@@ -9,7 +9,7 @@ docker pull registry.catenae.dev/twitter-crawler-json-adapter
 
 # Launch the crawler
 cd crawler/
-./launch.sh
+docker-compose up -d
 cd ..
 
 # Build the facade that allows us to raise any module
