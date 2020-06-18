@@ -21,7 +21,7 @@ MAINTAINER "Marcos Fernández" <marcosfernandezpichel@gmail.com>
 # HTTP API
 ################################################
 
-RUN \
+RUN \ 
 
     apt-get update && apt-get install libsqlite3-0 && apt-get -y install libmagic1 \
     && pip install --upgrade pip \
