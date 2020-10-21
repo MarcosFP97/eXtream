@@ -1,7 +1,7 @@
 # eXtream
 
 <p align="center">
-  <img src="logo.png" />
+  <img src="images/logo.png" />
 </p>
 
 ## Getting started
