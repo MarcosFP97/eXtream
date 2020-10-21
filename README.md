@@ -1,4 +1,9 @@
 # eXtream
+
+<p align="center">
+  <img src="logo.png" />
+</p>
+
 ## Getting started
 First of all, you need to have a Docker installation in your computer. Afterwards, you can launch eXtream executing **launch.sh**. 
 
